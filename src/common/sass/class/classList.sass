@@ -1,0 +1,99 @@
+.class-wrap
+  position: fixed
+  top: 0
+  bottom: 0
+  z-index: 100
+  left: 0
+  right: 0
+  .loading-container
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  .class-head
+    display: flex
+    margin: 0 15px
+    height: 40px
+    position: relative
+    align-items: center
+    font-family: '微软雅黑'
+    .back
+      flex: 0 0 11px
+      width: 11px
+      height: 18px
+      background-size: 11px 18px
+      background-repeat: no-repeat
+    .title
+      flex: 1
+      text-align: center
+      font-size: 17px
+  .class-content
+    .list-title
+      padding: 12px 15px;
+      border-bottom: 1px solid #dfdfdf;
+      display: flex;
+      display: -webkit-flex;
+      li
+        margin-right: 15px
+        position: relative
+        a
+          font-size: 16px
+          color: #7a8899
+          font-family: 'PingFang-SC-Medium';
+      .current
+        a
+          color: #2d3b4c
+          &::after
+            content: ''
+            position: absolute
+            bottom: -10px
+            left: 0
+            width: 100%
+            height: 3px
+            background: #2386f5
+            border-radius: 2px
+    .list-content
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      .list
+        display: flex;
+        display: -webkit-flex;
+        transition: transform 0.4s ease;
+        -webkit-transition: transform 0.4s ease;
+        ul
+          width: 100%;
+          flex-shrink: 0;
+          .wt
+            padding: 0 15px;
+          li
+            display: flex;
+            position: relative;
+            height: 60px;
+            line-height: 60px;
+            display: -webkit-flex; /* Safari */
+            border-bottom: 1px solid #dfdfdf;
+            .txt
+              font-size: 16px
+              padding-left: 10px
+              font-family: 'PingFang-SC-Medium';
+            .count
+              display: inline-block
+              width: 15px
+              position: absolute
+              right: 10px
+              top: 50%
+              transform: translateY(-50%)
+              height: 11px
+              vertical-align: top
+              background-repeat: no-repeat
+              background-size: 7px 11px
+              @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+                background-image: url('~@/common/image/teacher/arrow1.1@2x.png')
+              @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+                background-image: url('~@/common/image/teacher/arrow@3x.png')
+.slide-enter-active
+  transition: all .3s ease
+.slide-enter
+  transform: translateX(100%);

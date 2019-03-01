@@ -1,0 +1,179 @@
+.study-wrap
+  position: fixed
+  top: 0
+  bottom: 0
+  z-index: 35
+  left: 0
+  right: 0
+  background: #f6f6f6
+  .loading-container
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  .study-head
+    display: flex
+    padding: 0 15px
+    height: 40px
+    position: relative
+    align-items: center
+    font-family: '微软雅黑'
+    background: #fff
+    .back
+      flex: 0 0 11px
+      width: 11px
+      height: 18px
+      background-size: 11px 18px
+      background-repeat: no-repeat
+  .study-title
+    padding: 10px 15px
+    font-family: 'PingFang-SC-Bold';
+    font-size: 20px
+    color: #2d3b4c
+    background: #fff
+  .subTitle
+    padding: 0 15px 20px 15px
+    background: #fff
+    .text
+      display: inline-block
+      margin-right: 20px;
+      span
+        font-size: 13px
+        margin-right: 9px
+        font-family: 'PingFang-SC-Medium';
+        color: #7a8899;
+        margin-top: -1px
+      .clock
+        position: relative
+        top: -2px
+        display: inline-block
+        width: 15px
+        height: 15px
+        vertical-align: middle
+        background-image: url('~@/common/image/course/clock.png')
+        background-size: 15px 15px
+        background-repeat: no-repeat
+  .line
+    height: 20px
+    width: 100%
+    background-color: #f6f6f6;
+  .title
+    padding: 20px 15px
+    display: flex
+    display: -ms-flexbox
+    display: -webkit-flex
+    justify-content: space-between
+    align-items: center
+    background: #fff
+    .className
+      font-family: 'PingFang-SC-Bold';
+      font-size: 18px;
+      color: #2d3b4c;
+    .sendFamily
+      font-family: 'PingFang-SC-Medium';
+      font-size: 14px;
+      line-height: 19px
+      color: #5b7797;
+      .ling
+        display: inline-block
+        width: 19px
+        height: 19px
+        vertical-align: top
+        margin-right: 3px
+        background-image: url('~@/common/image/course/ling.png')
+        background-size: 19px 19px
+        background-repeat: no-repeat
+  .students
+    margin-top: 5px;
+    .text
+      font-family: 'PingFang-SC-Medium';
+      font-size: 16px;
+      color: #999999;
+      margin: 20px 0;
+    .student-title
+      padding: 15px;
+      font-family: 'PingFang-SC-Medium';
+      font-size: 16px;
+      color: #333333;
+      background-color: #f6f6f6;
+      border-bottom: 1px solid #eee;
+    .student-list
+      padding: 20px 15px;
+      background: #fff;
+      position: relative
+      .admire, .sad
+        text-align: center
+        .text
+          font-family: 'PingFang-SC-Medium';
+          font-size: 16px;
+          color: #999999;
+          margin: 20px 0;
+      ul
+        display: flex;
+        display: -webkit-flex;
+        width: 100%;
+        flex-wrap: wrap;
+        li
+          width: 25%;
+          flex: 1;
+          min-width: 25%;
+          max-width: 25%;
+          word-break: break-all;
+          margin-bottom: 20px
+          .student-avatar
+            width: 70%;
+            margin: 0 15%
+            border-radius: 50%;
+            position: relative
+            .score
+              position: absolute
+              right: -20px
+              top: 0
+              width: 38px;
+              height: 18px;
+              line-height: 18px
+              background-image: linear-gradient(90deg,#ff3464 0%, #ff7a64 100%)
+              border-radius: 4px
+              text-align: center
+              font-family: 'PingFang-SC-Medium';
+              font-size: 12px;
+              color: #fff
+            img
+              width: 100%;
+          .text
+            margin-top: 5px;
+            text-align: center;
+            font-size: 16px;
+            font-family: 'PingFang-SC-Medium';
+            color: #333
+            .btn
+              margin-top: 0.1rem;
+              background: #ffcfba;
+              color: #fff;
+              border-radius: 20px;
+              text-align: center;
+              font-size: 12px;
+.mask
+  position: fixed
+  z-index: 9999
+  background: #000
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  opacity: 0.8
+.fade-enter-active, .fade-leave-active
+  transition: opacity 0.4s
+.fade-enter, .fade-leave-to
+  opacity: 0
+  overflow: hidden
+.sendType
+  position: fixed
+  top: 50%
+  left: 50%
+  z-index: 9999999
+  transform: translate(-50%, -50%)
+.slide-enter-active
+  transition: all .3s ease
+.slide-enter
+  transform: translateX(100%);

@@ -1,0 +1,69 @@
+.crs-wrap
+  position: fixed
+  top: 0
+  bottom: 0
+  z-index: 100
+  left: 0
+  right: 0
+  .loading-container
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  .course-head
+    display: flex
+    padding: 0 15px
+    height: 40px
+    position: relative
+    align-items: center
+    font-family: '微软雅黑'
+    border-bottom: 1px solid #eee;
+    .back
+      flex: 0 0 11px
+      width: 11px
+      height: 18px
+      background-size: 11px 18px
+      background-repeat: no-repeat
+    .title
+      flex: 1
+      text-align: center
+      font-size: 17px
+  .course-list
+    .wt
+      padding: 20px 0;
+      display: flex;
+      display: -webkit-flex;
+      margin: 0 15px
+      border-bottom: 1px solid #eee;
+      .course
+        width: 135px;
+        height: 90px
+        img
+          width: 100%;
+          height: 100%;
+      .course-content
+        position: relative;
+        .title
+          font-weight: 600;
+          font-size: 17px;
+          font-family: 'PingFang-SC-Bold';
+          line-height: 20px;
+          margin-left: 14px;
+          color: #333
+        .course-time
+          margin-left: 14px;
+          position: absolute;
+          bottom: 2px;
+          font-family: 'PingFang-SC-Medium';
+          display: flex;
+          display: -webkit-flex;
+          justify-content: center;
+          align-items: center;
+          color: #999
+          .course-count
+            font-size: 12px;
+            width: 100px
+.slide-enter-active
+  transition: all .3s ease
+.slide-enter
+  transform: translateX(100%);

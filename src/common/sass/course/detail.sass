@@ -1,0 +1,102 @@
+.detail-wrapper
+  position: fixed
+  top: 0
+  bottom: 0
+  z-index: 35
+  left: 0
+  right: 0
+  .loading-container
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  .detail-head
+    display: flex
+    margin: 0 15px
+    height: 40px
+    position: relative
+    align-items: center
+    font-family: '微软雅黑'
+    .back
+      flex: 0 0 11px
+      width: 11px
+      height: 18px
+      background-size: 11px 18px
+      background-repeat: no-repeat
+  .title
+    padding: 10px 15px
+    font-family: 'PingFang-SC-Bold';
+    font-size: 20px
+    color: #2d3b4c
+  .subTitle
+    padding: 0 15px 20px 15px
+    .text
+      display: inline-block
+      margin-right: 20px;
+      span
+        font-size: 13px
+        margin-right: 9px
+        font-family: 'PingFang-SC-Medium';
+        color: #7a8899;
+  .line
+    height: 20px
+    width: 100%
+    background-color: #f6f6f6;
+  .course-title
+    font-family: 'PingFang-SC-Bold';
+    font-size: 18px;
+    font-weight: 500
+    padding: 20px 15px
+    color: #2d3b4c;
+  .course-list
+    .sTitle
+      background: #f6f6f6;
+      height: 50px;
+      line-height: 50px
+      font-family: 'PingFang-SC-Medium';
+      font-size: 16px;
+      padding: 0 15px
+      color: #333
+      position: relative
+      .arrow
+        position: absolute
+        right: 15px
+        top: 50%
+        margin-top: -3px
+        width: 11px
+        height: 7px
+        background-image: url('~@/common/image/course/arrowup@3x.png')
+        background-size: 11px 7px
+        background-repeat: no-repeat
+        transition: all 0.4s easing
+        &.down
+          transform: rotate(180deg)
+    .sList
+      ul
+        li
+          padding: 20px 15px;
+          display: flex
+          display: -ms-flexbox
+          display: -webkit-flex
+          justify-content: space-between
+          .num
+            color: #333
+            span
+              font-family: 'PingFang-SC-Medium';
+              font-size: 16px
+            &.cur
+              color: #999
+          .dis
+            width: 54px;
+            height: 20px;
+            line-height: 20px
+            text-align: center
+            background-color: #96adc9;
+            border-radius: 4px;
+            font-family: 'PingFang-SC-Medium';
+            font-size: 12px;
+            color: #fff
+.slide-enter-active
+  transition: all .3s ease
+.slide-enter
+  transform: translateX(100%);

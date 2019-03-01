@@ -1,0 +1,218 @@
+.wrap
+  position: fixed
+  top: 0
+  bottom: 0
+  z-index: 100
+  left: 15px
+  right: 15px
+  .header
+  .header-title
+    margin: 25px 0
+    display: flex
+    justify-content: space-between
+    .la_icon
+      display: inline-block
+      width: 13px
+      height: 17px
+      vertical-align: top
+      background-size: 13px 17px
+      margin-right: 2px
+      position: relative;
+      top: 0px;
+      background-repeat: no-repeat;
+      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+        background-image: url('~@/common/image/index/location2.png')
+      @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+        background-image: url('~@/common/image/index/location3.png')
+    .la_title
+      display: inline-block
+      font-family: PingFang-SC-Medium;
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: #7a8899;
+    .icon
+      display: inline-block
+      width: 17px
+      height: 17px
+      vertical-align: top
+      background-size: 17px 17px
+      margin-right: 2px
+      background-repeat: no-repeat
+      position: relative;
+      top: 0px;
+      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+        background-image: url('~@/common/image/index/close2.png')
+      @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+        background-image: url('~@/common/image/index/close3.png')
+    .title
+      display: inline-block
+      font-family: PingFang-SC-Medium;
+      font-size: 15px;
+      letter-spacing: 1px;
+      color: #566373;
+  .header-content
+    position: relative
+    width: 100%
+    padding-bottom: 50%
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+      border-radius: 6px
+      box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+      background-image: url('~@/common/image/index/bg2.png')
+    @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+      border-radius: 6px
+      box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+      background-image: url('~@/common/image/index/bg3.png')
+    &.teacher
+      @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+        background-image: url('~@/common/image/index/teacher@2x.png')
+      @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+        background-image: url('~@/common/image/index/teacher@3x.png')
+    .text
+      position: absolute
+      left: 25px
+      top: 50%
+      font-family: PingFang-SC-Bold;
+      font-size: 28px;
+      letter-spacing: 1px;
+      color: #ffffff;
+      transform: translateY(-50%)
+.content
+  margin: 20px 10px
+  .list
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .item
+      width: calc(50% - 7.5px);
+      position: relative
+      margin-bottom: 15px
+      padding-bottom: 33%
+      &.first
+        background-size: 100% 100%
+        background-repeat: no-repeat
+        @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+          border-radius: 8px
+          box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+          background-image: url('~@/common/image/index/bg1@2x.png')
+        @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+          border-radius: 8px
+          box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+          background-image: url('~@/common/image/index/bg1@3x.png')
+        .info
+          position: absolute
+          left: 20px
+          top: 50%
+          transform: translateY(-50%)
+          .icon
+            width: 27px;
+            height: 23px;
+            vertical-align: top
+            background-size: 27px 23px
+            margin-bottom: 12px
+            background-repeat: no-repeat
+            @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+              background-image: url('~@/common/image/index/student@2x.png')
+            @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+              background-image: url('~@/common/image/index/student@3x.png')
+            &.teacher
+              @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+                background-image: url('~@/common/image/index/teaInfo@2x.png')
+              @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+                background-image: url('~@/common/image/index/teaInfo@3x.png')
+      &.second
+        background-size: 100% 100%
+        background-repeat: no-repeat
+        @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+          border-radius: 8px
+          box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+          background-image: url('~@/common/image/index/bg2@2x.png')
+        @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+          border-radius: 8px
+          box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+          background-image: url('~@/common/image/index/bg3@3x.png')
+        .info
+          position: absolute
+          left: 20px
+          top: 50%
+          transform: translateY(-50%)
+          .icon
+            width: 27px;
+            height: 23px;
+            vertical-align: top
+            margin-bottom: 12px
+            background-size: 27px 23px
+            background-repeat: no-repeat
+            @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+              background-image: url('~@/common/image/index/xuejiyidong@2x.png')
+            @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+              background-image: url('~@/common/image/index/xuejiyidong@3x.png')
+            &.teacher
+              @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+                background-image: url('~@/common/image/index/teaCount@2x.png')
+              @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+                background-image: url('~@/common/image/index/teaCount@3x.png')
+      &.three
+        background-size: 100% 100%
+        background-repeat: no-repeat
+        @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+          border-radius: 8px
+          box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+          background-image: url('~@/common/image/index/bg3@2x.png')
+        @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+          border-radius: 8px
+          box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+          background-image: url('~@/common/image/index/bg3@3x.png')
+        .icon
+          position: absolute
+          width: 27px;
+          height: 23px;
+          vertical-align: top
+          background-size: 27px 23px
+          top: 20px
+          left: 20px
+          background-repeat: no-repeat
+          @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+            background-image: url('~@/common/image/index/zy@2x.png')
+          @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+            background-image: url('~@/common/image/index/zy@3x.png')
+          &.teacher
+            @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+              background-image: url('~@/common/image/index/bzr@2x.png')
+            @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+              background-image: url('~@/common/image/index/bzr@3x.png')
+      &.four
+        background-size: 100% 100%
+        background-repeat: no-repeat
+        @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+          border-radius: 8px
+          box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+          background-image: url('~@/common/image/index/bg4@2x.png')
+        @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+          border-radius: 8px
+          box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.07)
+          background-image: url('~@/common/image/index/bg4@3x.png')
+        .icon
+          position: absolute
+          width: 27px;
+          height: 23px;
+          vertical-align: top
+          background-size: 27px 23px
+          top: 20px
+          left: 20px
+          background-repeat: no-repeat
+          @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+            background-image: url('~@/common/image/index/by@2x.png')
+          @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+            background-image: url('~@/common/image/index/by@3x.png')
+      .text
+        font-family: PingFang-SC-Bold;
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: #ffffff;
+.slide-enter-active
+  transition: all .3s ease
+.slide-enter
+  transform: translateX(100%);
