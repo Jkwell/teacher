@@ -1,235 +1,244 @@
-.teacherwrap
+.allWrap
   position: fixed
   top: 0
   bottom: 0
-  z-index: 100
+  z-index: 99
   left: 0
+  overflow: hidden
   right: 0
-  .loading-container
+  .teacherwrap
     position: fixed
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-  .heads
-    display: flex
-    padding: 0 15px
-    height: 40px
-    justify-content: center
-    align-items: center
-    position: relative
-    .left
-      position: absolute
-      left: 15px
-    .title
-      font-family: "PingFang-SC-Medium"
-      font-size: 17px
-      color: #333333
-    &.active
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
-  .contents
-    margin: 10px 25px
-    position: relative
-    .pic
-      box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.07)
-      width: 100%
-      border-radius: 6px
+    top: 15px
+    bottom: 57px
+    z-index: 999
+    left: 0
+    overflow: hidden
+    right: 0
+    .loading-container
+      position: fixed
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    .heads
       display: flex
-      padding-bottom: 50%
+      padding: 0 15px
+      height: 40px
+      justify-content: center
       align-items: center
-      background-size: 100% 100%
       position: relative
-      background-repeat: no-repeat
-      background-image: url('~@/common/image/teacher/teacher.png')
-      .avatar
+      .left
         position: absolute
-        left: 25px
-        top: 50%
-        transform: translateY(-50%)
-        margin-right: 14px
-        img
-          border-radius: 50%
-      .name
-        position: absolute
-        left: 130px
-        top: 50%
-        transform: translateY(-50%)
-        font-family: "PingFang-SC-Medium;"
-        font-size: 18px;
-        font-weight: normal;
-        font-stretch: normal;
-        letter-spacing: 0.7px;
-        color: #ffffff;
-        .text
-          margin-bottom: 5px
-          .icon
-            display: inline-block
-            margin-left: 9px
-            width: 12px
-            height: 12px
-            vertical-align: middle
-            background-repeat: no-repeat
-            background-size: 12px 12px
-          .title
-            display: inline-block
-            width: 53px
-            height: 18px
-            position: relative
-            top: -1px
-            text-align: center
-            line-height: 16px
-            margin-left: 12px
-            background-image: linear-gradient(90deg, #ff3464 0%, #ff7a64 100%)
-            border-radius: 18px;
-            font-family: "PingFang-SC-Medium";
-            font-size: 12px;
+        left: 15px
+      .title
+        font-family: "PingFang-SC-Medium"
+        font-size: 17px
+        color: #333333
+      &.active
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    .contents
+      margin: 10px 25px
+      position: relative
+      .pic
+        box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.07)
+        width: 100%
+        border-radius: 6px
+        display: flex
+        padding-bottom: 50%
+        align-items: center
+        background-size: 100% 100%
+        position: relative
+        background-repeat: no-repeat
+        background-image: url('~@/common/image/teacher/teacher.png')
+        .avatar
+          position: absolute
+          left: 25px
+          top: 50%
+          transform: translateY(-50%)
+          margin-right: 14px
+          img
+            border-radius: 50%
+        .name
+          position: absolute
+          left: 130px
+          top: 50%
+          transform: translateY(-50%)
+          font-family: "PingFang-SC-Medium;"
+          font-size: 18px;
+          font-weight: normal;
+          font-stretch: normal;
+          letter-spacing: 0.7px;
+          color: #ffffff;
+          .text
+            margin-bottom: 5px
+            .icon
+              display: inline-block
+              margin-left: 9px
+              width: 12px
+              height: 12px
+              vertical-align: middle
+              background-repeat: no-repeat
+              background-size: 12px 12px
+            .title
+              display: inline-block
+              width: 53px
+              height: 18px
+              position: relative
+              top: -1px
+              text-align: center
+              line-height: 16px
+              margin-left: 12px
+              background-image: linear-gradient(90deg, #ff3464 0%, #ff7a64 100%)
+              border-radius: 18px;
+              font-family: "PingFang-SC-Medium";
+              font-size: 12px;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0.5px;
+              color: #ffffff;
+          .g-icon, .arrow
+            font-family: "PingFang-SC-Medium"
+            font-size: 15px;
             font-weight: normal;
             font-stretch: normal;
-            letter-spacing: 0.5px;
+            line-height: 24px;
+            letter-spacing: 0.6px;
             color: #ffffff;
-        .g-icon, .arrow
-          font-family: "PingFang-SC-Medium"
-          font-size: 15px;
+            opacity: 0.8;
+      .list-scroll
+        margin-top: 30px
+        .list-title
+          font-family: "PingFang-SC-Bold;"
+          font-size: 1.125rem;
           font-weight: normal;
           font-stretch: normal;
-          line-height: 24px;
-          letter-spacing: 0.6px;
-          color: #ffffff;
-          opacity: 0.8;
-    .list-scroll
-      margin-top: 30px
-      .list-title
-        font-family: "PingFang-SC-Bold;"
-        font-size: 1.125rem;
-        font-weight: normal;
-        font-stretch: normal;
-        letter-spacing: 0.7px;
-        color: #2d3b4c;
-      .list-item
-        display: flex
-        padding: 17px 0
-        justify-content: space-between
+          letter-spacing: 0.7px;
+          color: #2d3b4c;
+        .list-item
+          display: flex
+          padding: 17px 0
+          justify-content: space-between
 
-        align-items: center
-        position: relative
-        border-bottom: 1px solid #eee
-        .icon
-          font-family: "PingFang-SC-Medium";
-          font-size: 16px;
-          font-weight: normal;
-          font-stretch: normal;
-          letter-spacing: 0.6px;
-          color: #333333;
-          .picImg
-            vertical-align: middle
-            position: relative
-            top: -1px
-        .text
-          font-family: "PingFang-SC-Medium";
-          font-size: 15px;
-          font-weight: normal;
-          font-stretch: normal;
-          letter-spacing: 0.6px;
-          color: #333333;
-        .tag
-          .upload
-            img
-              border-radius: 50%
-          .num
-            display: inline-block
-            text-align: center
-            line-height: 18px
-            height: 19px
-            font-family: 'PingFang-SC-Medium';
+          align-items: center
+          position: relative
+          border-bottom: 1px solid #eee
+          .icon
+            font-family: "PingFang-SC-Medium";
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0.6px;
+            color: #333333;
+            .picImg
+              vertical-align: middle
+              position: relative
+              top: -1px
+          .text
+            font-family: "PingFang-SC-Medium";
             font-size: 15px;
             font-weight: normal;
             font-stretch: normal;
             letter-spacing: 0.6px;
             color: #333333;
-            margin-right: 18px
-          .arrow
-            display: inline-block
-            margin-left: 9px
-            width: 7px
-            position: absolute
-            right: 0
-            top: 50%
-            transform: translateY(-50%)
-            height: 11px
-            vertical-align: top
-            background-repeat: no-repeat
-            background-size: 7px 11px
-            @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
-              background-image: url('~@/common/image/teacher/arrow1.1@2x.png')
-            @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
-              background-image: url('~@/common/image/teacher/arrow@3x.png')
-      // .avatar
-      //   margin-right: 14px
-      // .name
-      //   font-family: "PingFang-SC-Medium;"
-      //   font-size: 18px;
-      //   font-weight: normal;
-      //   font-stretch: normal;
-      //   letter-spacing: 0.7px;
-      //   color: #333;
-      //   .text
-      //     margin-bottom: 10px
-      //     .icon
-      //       display: inline-block
-      //       margin-left: 9px
-      //       width: 12px
-      //       height: 12px
-      //       vertical-align: middle
-      //       background-repeat: no-repeat
-      //       background-size: 12px 12px
-      //       &.men
-      //         @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
-      //           background-image: url('../images/xue/men@2x.png')
-      //         @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
-      //           background-image: url('../images/xue/men@3x.png')
-      //       &.women
-      //         @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
-      //           background-image: url('../images/xue/nv@2x.png')
-      //         @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
-      //           background-image: url('../images/xue/nv@3x.png')
-      //   .g-icon
-      //     font-family: "PingFang-SC-Medium;"
-      //     font-size: 14px;
-      //     font-weight: normal;
-      //     font-stretch: normal;
-      //     letter-spacing: 0.6px;
-      //     color: #999;
-      // .arrow
-      //   position: absolute
-      //   right: 20px
-      //   top: 33%
-      //   .tag
-      //     width: 53px
-      //     height: 18px
-      //     padding: 4px 14px
-      //     text-align: center
-      //     background-image: linear-gradient(#ff3464 0%, #ff7a64 100%)
-      //     border-radius: 25px
-      //     font-family: "PingFang-SC-Medium;"
-      //     font-size: 12px;
-      //     font-weight: normal;
-      //     font-stretch: normal;
-      //     letter-spacing: 0.5px;
-      //     color: #ffffff;
-      //   .right-arrow
-      //     display: inline-block
-      //     margin-left: 9px
-      //     width: 7px
-      //     position: relative
-      //     top: 1px
-      //     height: 11px
-      //     vertical-align: top
-      //     background-repeat: no-repeat
-      //     background-size: 7px 11px
-      //     @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
-      //       background-image: url('../images/xue/arrow1.1@2x.png')
-      //     @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
-      //       background-image: url('../images/xue/arrow1.2@3x.png')
-.slide-enter-active
-  transition: all .3s ease
-.slide-enter
-  transform: translateX(100%);
+          .tag
+            .upload
+              img
+                border-radius: 50%
+            .num
+              display: inline-block
+              text-align: center
+              line-height: 18px
+              height: 19px
+              font-family: 'PingFang-SC-Medium';
+              font-size: 15px;
+              font-weight: normal;
+              font-stretch: normal;
+              letter-spacing: 0.6px;
+              color: #333333;
+              margin-right: 18px
+            .arrow
+              display: inline-block
+              margin-left: 9px
+              width: 7px
+              position: absolute
+              right: 0
+              top: 50%
+              transform: translateY(-50%)
+              height: 11px
+              vertical-align: top
+              background-repeat: no-repeat
+              background-size: 7px 11px
+              @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+                background-image: url('~@/common/image/teacher/arrow1.1@2x.png')
+              @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+                background-image: url('~@/common/image/teacher/arrow@3x.png')
+        // .avatar
+        //   margin-right: 14px
+        // .name
+        //   font-family: "PingFang-SC-Medium;"
+        //   font-size: 18px;
+        //   font-weight: normal;
+        //   font-stretch: normal;
+        //   letter-spacing: 0.7px;
+        //   color: #333;
+        //   .text
+        //     margin-bottom: 10px
+        //     .icon
+        //       display: inline-block
+        //       margin-left: 9px
+        //       width: 12px
+        //       height: 12px
+        //       vertical-align: middle
+        //       background-repeat: no-repeat
+        //       background-size: 12px 12px
+        //       &.men
+        //         @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+        //           background-image: url('../images/xue/men@2x.png')
+        //         @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+        //           background-image: url('../images/xue/men@3x.png')
+        //       &.women
+        //         @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+        //           background-image: url('../images/xue/nv@2x.png')
+        //         @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+        //           background-image: url('../images/xue/nv@3x.png')
+        //   .g-icon
+        //     font-family: "PingFang-SC-Medium;"
+        //     font-size: 14px;
+        //     font-weight: normal;
+        //     font-stretch: normal;
+        //     letter-spacing: 0.6px;
+        //     color: #999;
+        // .arrow
+        //   position: absolute
+        //   right: 20px
+        //   top: 33%
+        //   .tag
+        //     width: 53px
+        //     height: 18px
+        //     padding: 4px 14px
+        //     text-align: center
+        //     background-image: linear-gradient(#ff3464 0%, #ff7a64 100%)
+        //     border-radius: 25px
+        //     font-family: "PingFang-SC-Medium;"
+        //     font-size: 12px;
+        //     font-weight: normal;
+        //     font-stretch: normal;
+        //     letter-spacing: 0.5px;
+        //     color: #ffffff;
+        //   .right-arrow
+        //     display: inline-block
+        //     margin-left: 9px
+        //     width: 7px
+        //     position: relative
+        //     top: 1px
+        //     height: 11px
+        //     vertical-align: top
+        //     background-repeat: no-repeat
+        //     background-size: 7px 11px
+        //     @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+        //       background-image: url('../images/xue/arrow1.1@2x.png')
+        //     @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+        //       background-image: url('../images/xue/arrow1.2@3x.png')
+  .slide-enter-active
+    transition: all .3s ease
+  .slide-enter
+    transform: translateX(100%);

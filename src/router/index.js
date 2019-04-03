@@ -19,6 +19,7 @@ import Dbreport from '@/components/Report/dbreport.vue'
 Vue.use(Router)
 export default new Router({
   mode: 'history',
+  linkActiveClass: 'active',
   routes: [
     {
       path: '/',

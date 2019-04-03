@@ -1,11 +1,14 @@
 .wrap
   position: fixed
-  top: 0
-  bottom: 0
+  top: 0;
+  bottom: 0;
   z-index: 100
-  left: 15px
-  right: 15px
+  left: 0
+  right: 0
+  overflow: hidden
+  font-family: sans-serif;
   .header
+    padding: 0 15px;
   .header-title
     margin: 25px 0
     display: flex
@@ -79,7 +82,63 @@
       color: #ffffff;
       transform: translateY(-50%)
 .content
-  margin: 20px 10px
+  margin: 20px 15px
+  position: fixed;
+  bottom: 57px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  .class-title
+    font-size: 18px
+    font-weight: 600
+  .class-list
+    position: fixed;
+    bottom: 57px;
+    left: 15px;
+    right: 15px;
+    overflow: hidden;
+    .class-item
+      display: flex
+      align-items: center
+      padding: 15px 0;
+      border-bottom: 1px solid #eee
+      .sub-title, .sub-name, .num
+        font-size: 16px
+        flex: 1
+        color: #333
+        font-family: "PingFang-SC-Medium"
+      .num
+        flex: 0 0 40px
+      .sub-title
+        padding-left: 15px
+      .sub-name
+        text-align: center
+      .num
+        padding-right: 25px
+        position: relative
+        text-align: right
+        .red
+          color: #ff2a2a
+          font-size: 18px
+        .grey
+          color: #999
+          font-size: 11px
+        &:after
+          content: ''
+          display: inline-block
+          width: 15px
+          position: absolute
+          right: 0;
+          top: 12px;
+          transform: translateY(-50%)
+          height: 11px
+          vertical-align: top
+          background-repeat: no-repeat
+          background-size: 7px 11px
+          @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+            background-image: url('~@/common/image/teacher/arrow1.1@2x.png')
+          @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+            background-image: url('~@/common/image/teacher/arrow@3x.png')
   .list
     width: 100%
     display: flex
@@ -212,6 +271,8 @@
         font-size: 15px;
         letter-spacing: 1px;
         color: #ffffff;
+        .text
+          color: #66a2f7
 .slide-enter-active
   transition: all .3s ease
 .slide-enter

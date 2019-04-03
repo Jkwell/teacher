@@ -119,7 +119,11 @@ export default {
         _this.sign_score = data.data.sign_score
         _this.look_score = data.data.look_score
         _this.sign_in = data.data.sign_in
-        _this.info = data.data.look_info + ' ' + data.data.other
+        if (data.data.other) {
+          _this.info = data.data.other
+        } else {
+          _this.info = data.data.evaluate
+        }
       }
     })
     _this.$nextTick(() => {

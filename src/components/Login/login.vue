@@ -108,6 +108,12 @@ export default {
         if (data) {
           self.callback({ loginStatus, userInfo }, data)
         }
+      }).catch((err) => {
+        self.$vux.loading.hide()
+        self.$vux.alert.show({
+          title: '登录失败',
+          content: '账号或密码错误'
+        })
       })
     },
     callback (user, data) {

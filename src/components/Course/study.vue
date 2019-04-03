@@ -2,14 +2,7 @@
 <transition name="slide">
 
   <div class="study-wrap" ref="wrapper">
-    <transition name="fade">
-      <div v-if="show">
-      <div class="mask" @click="close"></div>
-      <div class="sendType">
-        <img src="../../common/image/course/success.png" width="205" height="144">
-      </div>
-      </div>
-    </transition>
+
     <div>
 
     <div class="study-head">
@@ -36,6 +29,7 @@
       <div class="student-title">
         未学习
         <span>({{doNum}})</span>
+        <span @click="send" class="btn">一键发送</span>
       </div>
       <div class="student-list">
         <div class="admire" v-if="courselistDo.length === 0">
@@ -87,8 +81,21 @@
   <div class="loading-container" v-show="!loaded">
       <loading></loading>
     </div>
-  </div>
+
+<transition name="fade">
+    <div>
+      <div v-if="show">
+      <div class="mask"></div>
+      <div class="sendType">
+        <img src="../../common/image/course/success.png" width="205" height="144">
+      </div>
+      </div>
+      </div>
     </transition>
+    </div>
+
+    </transition>
+
 </template>
 
 <script>
@@ -244,6 +251,41 @@ export default {
         this.$router.push({path: 'zbreport', query: obj})
       } else {
         return false
+      }
+    },
+    send () {
+      if (this.courselistDo.length === 0) {
+        return false
+      }
+      let _this = this
+      let flag = true
+      let bgtype = this.$route.query.type
+      console.log(bgtype)
+      let chid = this.$route.query.ch_id
+      let name = this.ch_name
+      let token = this.userInfo.token
+      let arr = [];
+      _this.courselistDo.forEach(function (item, index) {
+        arr.push(item.user_id)
+      })
+      let courselistDoJson = arr.join(',')
+      this.senmsg = '已发送'
+      if (flag) {
+        if (this.courselistDo.length > 0) {
+          let param = {bg_type: bgtype, ch_name: name, ch_id: chid, token: token, user_id: courselistDoJson}
+          console.log(param)
+          requestPost('api/teacher/sendMessage', param).then(function (data) {
+            if (data.success === true) {
+              flag = false
+              _this.show = true
+              setTimeout(() => {
+                _this.show = false
+                console.log(_this.$router)
+                _this.senmsg = '发送'
+              }, 2000)
+            }
+          })
+        }
       }
     },
     back () {

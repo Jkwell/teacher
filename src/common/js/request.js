@@ -27,6 +27,7 @@ export const requestGet = (url) => {
 export const requestPost = (url, val) => {
   return new Promise(function (resolve, reject) {
     axios.post(url, val).then(res => {
+      console.log(res)
       if (res.data.success === true) {
         resolve(res.data)
       } else {

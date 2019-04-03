@@ -301,6 +301,7 @@ export default {
       if (flag) {
         if (this.all_checkedlist.length > 0) {
           let param = {bg_type: bgtype, ch_name: name, ch_id: chid, token: token, user_id: strJson}
+          console.log(param)
           requestPost('api/teacher/sendMessage', param).then(function (data) {
             if (data.success === true) {
               flag = false

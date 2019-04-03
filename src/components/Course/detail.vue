@@ -27,11 +27,11 @@
       </div>
       <div class="sList" v-show="item.showContent">
         <ul>
-          <li v-for="(sitem, sindex) in item.list" :key="sindex" @click="goPath(sitem.ch_type, sitem.ch_id, sitem.ch_name)">
-            <div class="num" :class="{cur: sitem.status === 0 || 2}"><span>{{index + 1}}.{{sindex + 1}}</span><span>{{sitem.ch_name}}</span></div>
-            <div class="dis" v-if="sitem.status === 0">未开课</div>
-            <div class="dis" v-else-if="sitem.status === 2">已结束</div>
-            <div v-else></div>
+          <li v-for="(sitem, sindex) in item.list" :key="sindex" @click="goPath(sitem.status, sitem.ch_type, sitem.ch_id, sitem.ch_name)">
+            <div class="num" :class="{cur: sitem.status === 0 || sitem.status === 2 ? 'cur' : ''}"><span>{{index + 1}}.{{sindex + 1}}</span><span>{{sitem.ch_name}}</span></div>
+            <div class="dis" v-if="sitem.status === 0">未开放</div>
+            <div class="diss" v-else-if="sitem.status === 2">查看</div>
+            <div class="red" v-else>进行中</div>
           </li>
         </ul>
       </div>
@@ -73,14 +73,18 @@ export default {
       this.down = !this.down
       this.courselist[index].showContent = !this.courselist[index].showContent
     },
-    goPath (type, id, name) {
-      this.$router.push({path: 'coursestudy', query: {type: type, cm_id: this.cm_id, ch_id: id, class_name: this.class_name, class_id: this.class_id, name: name}})
+    goPath (status, type, id, name) {
+      if (status === 0 || status === 1) {
+        return false
+      } else {
+        this.$router.push({path: 'coursestudy', query: {type: type, cm_id: this.cm_id, ch_id: id, class_name: this.class_name, class_id: this.class_id, name: name}})
+      }
     },
     getCourseDetail (param) {
       let _this = this
-      _this.courselist = []
       requestPost('api/teacher/coursehourlist', param).then(function (data) {
         if (data.success === true) {
+          _this.courselist = []
           let response = data.data.lists
           _this.course_name = data.data.cm_name
           for (let k in response) {
